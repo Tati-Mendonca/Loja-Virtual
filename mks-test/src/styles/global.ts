@@ -16,7 +16,8 @@ export const GlobalStyle = createGlobalStyle`
 
     body {
         height: 100vh;
-        font-family:  'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      }
-  
+        font-family: "Montserrat", sans-serif;
+    }
+
+
 `

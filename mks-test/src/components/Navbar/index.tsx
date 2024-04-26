@@ -1,12 +1,12 @@
 import React from 'react'
-import { Container, Shop, Logo } from './style';
+import { Container, Shop, Name } from './style';
 
 import { FaCartShopping } from "react-icons/fa6";
 
 const Navbar = () => {
   return (
     <Container>
-        <Logo>MKS</Logo>
+        <Name>MKS<span>Sistemas</span></Name>
         <Shop><FaCartShopping />
         <span>0</span>
         </Shop>

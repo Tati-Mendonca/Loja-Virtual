@@ -10,8 +10,15 @@ export const Container = styled.header`
     align-items: flex-end;
 `
 
-export const Logo = styled.h1`
+export const Name = styled.h1`
         color: var(--white);
+        font-weight: 700;
+      
+        span{
+            font-weight: 300;
+            font-Size: 14px;
+            padding: 4px;
+        }
 `
 
 export const Shop = styled.div`
@@ -21,5 +28,3 @@ export const Shop = styled.div`
     padding: 5px 15px;
     background-color: var(--white);
 `
-
-// padding: 15px 30px;
