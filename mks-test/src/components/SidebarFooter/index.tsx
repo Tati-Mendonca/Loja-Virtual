@@ -1,13 +1,12 @@
-import React from 'react'
-import { SidebarFotter } from './style'
-import Button from '../Button'
+import { SidebarFotter } from './style';
+import Button from '../Button';
 
 const SidebarFooter = () => {
-  return (
-    <SidebarFotter>
-      <Button Text="Finalizar Compra" onClick={undefined} Type={Button}></Button>
-    </SidebarFotter>
-  )
-}
+    return (
+        <SidebarFotter>
+            <Button>Finalizar compra</Button>
+        </SidebarFotter>
+    );
+};
 
-export default SidebarFooter
+export default SidebarFooter;

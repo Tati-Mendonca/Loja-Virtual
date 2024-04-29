@@ -26,5 +26,6 @@ export const Shop = styled.div`
     align-items: center;
     gap: 5px;
     padding: 5px 15px;
+    cursor: pointer;
     background-color: var(--white);
 `

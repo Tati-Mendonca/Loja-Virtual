@@ -1,18 +1,23 @@
-import React from 'react'
-import Navbar from "../components/Navbar"
-import Footer from '../components/Footer'
-import ProductGrid from '../components/ProductGrid'
-import Sidebar from '../components/Sidebar'
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
+import ProductGrid from '../components/ProductGrid';
+import Sidebar from '../components/Sidebar';
+import { useState } from 'react';
 
 const Home = () => {
-  return (
-    <>
-      {/* <Sidebar /> */}
-      <Navbar />
-      <ProductGrid />
-      <Footer />  
-    </>
-  )
-}
+    const [count, setCount] = useState(0);
+    const openCartSidebar = () => {
+        setCount(count + 1);
+    };
 
-export default Home
+    return (
+        <>
+            {/* <Sidebar /> */}
+            <Navbar openCartSidebar={count} />
+            <ProductGrid openCartSidebar={openCartSidebar} />
+            <Footer />
+        </>
+    );
+};
+
+export default Home;

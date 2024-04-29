@@ -1,4 +1,4 @@
-import { createGlobalStyle } from "styled-components"
+import { createGlobalStyle } from 'styled-components';
 
 export const GlobalStyle = createGlobalStyle`
 :root {
@@ -6,6 +6,7 @@ export const GlobalStyle = createGlobalStyle`
     --black: #000000;
     --white: #FFFFFF;
     --grey: #EEEEEE;
+    --grey-price: #373737;
   }
 
     *{
@@ -19,5 +20,9 @@ export const GlobalStyle = createGlobalStyle`
         font-family: "Montserrat", sans-serif;
     }
 
+    li{
+        list-style: none;
+    }
 
-`
+
+`;

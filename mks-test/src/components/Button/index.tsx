@@ -1,13 +1,17 @@
-import React from 'react'
+import React from 'react';
 
-const Button = ({ Text, onClick, Type }) => {
-  return (
-    <div>
-    <button type={Type} onClick={onClick}>
-      {Text}
-    </button>
-    </div>
-  )
-}
+type Props = {
+    type?: 'button' | 'submit' | 'reset';
+    onClick?: VoidFunction;
+    children: React.ReactNode;
+};
 
-export default Button
+const Button = ({ type = 'button', onClick, children }: Props) => {
+    return (
+        <button type={type} onClick={onClick}>
+            {children}
+        </button>
+    );
+};
+
+export default Button;

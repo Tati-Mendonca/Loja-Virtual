@@ -1,22 +1,12 @@
-import React from 'react'
-import { ProductGrid__Container } from './style'
-import ProductCard from '../ProductCard'
+import { ProductGrid__Container } from './style';
+import ProductCard from '../ProductCard';
 
+const ProductGrid = ({ openCartSidebar }) => {
+    return (
+        <ProductGrid__Container>
+            <ProductCard openCartSidebar={openCartSidebar} />
+        </ProductGrid__Container>
+    );
+};
 
-const ProductGrid = () => {
-  return (
-    <ProductGrid__Container>
-      <ProductCard />
-      <ProductCard />
-      <ProductCard />
-      <ProductCard />
-      
-      <ProductCard />
-      <ProductCard />
-      <ProductCard />
-      <ProductCard />
-    </ProductGrid__Container>
-  )
-}
-
-export default ProductGrid
+export default ProductGrid;

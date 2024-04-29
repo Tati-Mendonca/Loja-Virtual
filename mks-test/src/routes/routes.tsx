@@ -1,15 +1,15 @@
-import { BrowserRouter, Routes ,Route } from "react-router-dom"
-import Home from "../pages/Home"
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Home from '../pages/Home';
 
 const RoutesApp = () => {
     return (
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          {/* <Route path="/*" element={<NotFound />} /> */}
-        </Routes>
-      </BrowserRouter>
+        <BrowserRouter>
+            <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/home" element={<Home />} />
+            </Routes>
+        </BrowserRouter>
     );
-  };
-  
-  export default RoutesApp;
+};
+
+export default RoutesApp;

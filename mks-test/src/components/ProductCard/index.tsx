@@ -1,39 +1,55 @@
-import React from 'react'
-import Button from '../Button'
-import { ProductCard__Container } from './style'
-import { motion } from "framer-motion";
-
-
-
-const handleUpdateItem = () => {
-  alert("Adicionar produto ao carrinho")
-
-
-}
+import Button from '../Button';
+import { ProductCard__Container } from './style';
+import { motion } from 'framer-motion';
+import getProducts from '../../api/api';
+import { useEffect, useState } from 'react';
+import { apiProducts } from '../../api/interface';
 
 const parent = {
-  variantA:{ scale:1 },
-  variantB:{ scale: 1.10},
-}
+    variantA: { scale: 1 },
+    variantB: { scale: 1.1 },
+};
 
-const ProductCard = () => {
-  return (
-    <ProductCard__Container as={motion.div} variants={parent} initial="variantA" whileHover="variantB">
-      <img src="" alt="ProductCard" />
-      <div>
-        <ol>
-          <li>Titulo</li>
-          <li>R$000</li>
-          <li>Descrição</li>
-        </ol>
-        </div>
-        <Button Text="COMPRAR" onClick={handleUpdateItem} />
-      {/* <h1>Titulo</h1>
-      <span>R$000</span>
-      <p>Descrição</p> */}
-   
-    </ProductCard__Container>
-  )
-}
+const ProductCard = ({ openCartSidebar }) => {
+    const [products, setProducts] = useState<apiProducts[]>([]);
 
-export default ProductCard
+    useEffect(() => {
+        getProducts()
+            .then((res) => res.data)
+            .then((data) => {
+                const products = data.products;
+                setProducts(products);
+            })
+            .catch((err) => console.log(err));
+    }, []);
+
+    return products.map((product) => (
+        <li key={product.id}>
+            <ProductCard__Container
+                as={motion.div}
+                variants={parent}
+                initial="variantA"
+                whileHover="variantB"
+            >
+                <img className="img-product" src={product.photo} alt="" />
+                <div className="boxCard">
+                    <ol>
+                        <li>{product.name}</li>
+                        <li>
+                            {' '}
+                            <span>R${Number(product.price)}</span>
+                        </li>
+                    </ol>
+                    <p>
+                        <span>{product.description}</span>
+                    </p>
+                </div>
+                <Button onClick={() => openCartSidebar(product.id)}>
+                    COMPRAR
+                </Button>
+            </ProductCard__Container>
+        </li>
+    ));
+};
+
+export default ProductCard;
