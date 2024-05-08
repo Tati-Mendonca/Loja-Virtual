@@ -10,6 +10,11 @@ export const MainFooter = styled.footer`
     justify-content: center;
     align-items: center;
 
+    a{
+        text-decoration: none;
+        color: var(--black);
+    }
+
     @media (max-width: 769px) {
         margin-top: 24rem;
     }

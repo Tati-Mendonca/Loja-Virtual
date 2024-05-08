@@ -7,6 +7,7 @@ export const GlobalStyle = createGlobalStyle`
     --white: #FFFFFF;
     --grey: #EEEEEE;
     --grey-price: #373737;
+    --shadown: #BFBFBF;
   }
 
     *{

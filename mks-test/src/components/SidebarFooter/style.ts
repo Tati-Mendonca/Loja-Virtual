@@ -1,11 +1,13 @@
 import styled from "styled-components"
 
 export const SidebarFotter = styled.div`
-height: 13vh;
 background-color: var(--black);
-display:flex;
-justify-content:center;
-align-items: center;
+bottom: 0;
+position: absolute;
+width: 100%;
+height: 13vh;
+display: flex;
+justify-content: center;
 
 button{
     color: var(--white);

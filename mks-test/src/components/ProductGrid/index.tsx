@@ -1,10 +1,10 @@
 import { ProductGrid__Container } from './style';
 import ProductCard from '../ProductCard';
 
-const ProductGrid = ({ openCartSidebar }) => {
+const ProductGrid = ({ changeCart, products }) => {    
     return (
         <ProductGrid__Container>
-            <ProductCard openCartSidebar={openCartSidebar} />
+            <ProductCard changeCart={changeCart} products={products} />
         </ProductGrid__Container>
     );
 };

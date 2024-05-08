@@ -1,15 +1,15 @@
 import { Container, Shop, Name } from './style';
 import { FaCartShopping } from 'react-icons/fa6';
 
-const Navbar = ({ openCartSidebar }) => {
+const Navbar = ({ changeCart, openSidebarCart }) => {     
     return (
         <Container>
             <Name>
                 MKS<span>Sistemas</span>
             </Name>
-            <Shop>
+            <Shop onClick={openSidebarCart}>
                 <FaCartShopping />
-                <span>{openCartSidebar}</span>
+                <span>{changeCart}</span>
             </Shop>
         </Container>
     );
