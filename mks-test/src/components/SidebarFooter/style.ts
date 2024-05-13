@@ -16,4 +16,12 @@ button{
     font-weight: 700;
     font-size: 23px;
 }
+
+@media (max-width: 1024px) {
+    height: 10vh;
+}
+
+@media (max-width: 769px) {
+
+}
 `

@@ -8,7 +8,7 @@ const parent = {
 };
 
 const ProductCard = ({ changeCart, products }) => {
-    return products.map((product) => (
+    return products.map((product, index) => (
             
             <ProductCard__Container
                 key={product.id}
@@ -22,7 +22,6 @@ const ProductCard = ({ changeCart, products }) => {
                     <ol>
                         <li>{product.name}</li>
                         <li>
-                            {/* {' '} */}
                             <span>R${Number(product.price)}</span>
                         </li>
                     </ol>

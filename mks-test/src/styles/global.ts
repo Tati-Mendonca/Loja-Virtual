@@ -17,13 +17,10 @@ export const GlobalStyle = createGlobalStyle`
     }
 
     body {
-        height: 100vh;
         font-family: "Montserrat", sans-serif;
     }
 
     li{
         list-style: none;
     }
-
-
 `;

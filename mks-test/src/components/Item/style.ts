@@ -37,9 +37,12 @@ export const Container__product = styled.div`
             border: none;
             background-color: var(--white);
             font-size: 10px;
+            padding:2.5px ;
+
         }
+
         span {
-            padding: 5px;
+            padding: 0 4px;
         }
     }
 

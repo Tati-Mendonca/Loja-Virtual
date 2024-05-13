@@ -3,8 +3,18 @@ import SidebarHeader from '../SidebarHeader';
 import { Sidebar__Container } from './style';
 import SidebarBody from '../SidebarBody';
 
-const Sidebar = ({ openSidebarCart, changeCart, itemProduct, products, totalPrice }) => {
-
+const Sidebar = ({
+    openSidebarCart,
+    changeCart,
+    itemProduct,
+    products,
+    totalPrice,
+    handleRemoveItem,
+    handleAddItem,
+    selectedItem,
+    handleUpdateItem,
+}) => {
+    
     return (
         <Sidebar__Container>
             <SidebarHeader openSidebarCart={openSidebarCart} />
@@ -12,11 +22,15 @@ const Sidebar = ({ openSidebarCart, changeCart, itemProduct, products, totalPric
                 changeCart={changeCart}
                 itemProduct={itemProduct}
                 products={products}
+                handleRemoveItem={handleRemoveItem}
+                selectedItem={selectedItem}
+                handleAddItem={handleAddItem}
+                handleUpdateItem={handleUpdateItem}
             />
-               <div className="total__price">
-                    <div>Total:</div>
-                    <div>R${totalPrice}</div>
-                </div>
+            <div className="total__price">
+                <p>Total:</p>
+                <span>R${totalPrice}</span>
+            </div>
 
             <SidebarFooter />
         </Sidebar__Container>
