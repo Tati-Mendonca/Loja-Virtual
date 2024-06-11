@@ -5,7 +5,7 @@
 
 ## Objetivo
 
-O objetivo deste projeto era consumir uma <a href="https://mks-frontend-challenge-04811e8151e6.herokuapp.com/api-docs/">API REST<a/> fornecida pela loja, onde o usuário pode visualizar os produtos e selecionar quais deseja comprar, abrir o carrinho de compras conferir a quantidade de produtos além valor total antes de finalizar a compra.
+O objetivo deste projeto era consumir uma <a href="https://mks-frontend-challenge-04811e8151e6.herokuapp.com/api-docs/">API REST<a/> fornecida pela loja, onde o usuário pode visualizar os produtos e selecionar quais deseja comprar, abrir o carrinho de compras conferir a quantidade de produtos além valor total antes de finalizar o pedido.
 
 
 
