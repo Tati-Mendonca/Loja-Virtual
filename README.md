@@ -3,6 +3,10 @@
 
 Neste projeto o desafio prposto foi o desenvolvimento front-end de uma loja virtual com um catálogo de produtos e resumo da compras utilizando React e Typescript.
 
+<p align="center">
+<img loading="lazy" src="http://img.shields.io/static/v1?label=STATUS&message=EM%20DESENVOLVIMENTO&color=GREEN&style=for-the-badge"/>
+</p>
+
 ## Objetivo
 
 O objetivo deste projeto era consumir uma <a href="https://mks-frontend-challenge-04811e8151e6.herokuapp.com/api-docs/">API REST<a/> fornecida pela loja, onde o usuário pode visualizar os produtos e selecionar quais deseja comprar, abrir o carrinho de compras conferir a quantidade de produtos além do valor total antes de finalizar o pedido.
