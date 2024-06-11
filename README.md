@@ -1,13 +1,11 @@
 
 # Sobre o projeto
 
-...
+Neste projeto o desafio prposto foi o desenvolvimento front-end de uma loja virtual com um catálogo de produtos e resumo da compras utilizando React e Typescript.
 
 ## Objetivo
 
-O objetivo deste projeto era consumir uma <a href="https://mks-frontend-challenge-04811e8151e6.herokuapp.com/api-docs/">API REST<a/> fornecida pela loja, onde o usuário pode visualizar os produtos e selecionar quais deseja comprar, abrir o carrinho de compras conferir a quantidade de produtos além valor total antes de finalizar o pedido.
-
-
+O objetivo deste projeto era consumir uma <a href="https://mks-frontend-challenge-04811e8151e6.herokuapp.com/api-docs/">API REST<a/> fornecida pela loja, onde o usuário pode visualizar os produtos e selecionar quais deseja comprar, abrir o carrinho de compras conferir a quantidade de produtos além do valor total antes de finalizar o pedido.
 
 ## Protótipo
 <img width="473" alt="mks proto1" src="https://github.com/Tati-Mendonca/app-ecommerce/assets/97405991/b268fd67-8689-4b07-b63f-533d3eb9277b">
