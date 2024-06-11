@@ -24,6 +24,7 @@ Visualize o projeto completo aqui: [(test-mks-kappa.vercel.app)](https://test-mk
 - Typescript
 - Node.js
 - Git e GitHub
+- Axios
 - React
 - Bootstrap
 - Framer-motion
