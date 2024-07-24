@@ -1,10 +1,10 @@
 import React from 'react';
 
-type Props = {
+interface Props {
     type?: 'button' | 'submit' | 'reset';
     onClick?: VoidFunction;
     children: React.ReactNode;
-};
+}
 
 const Button = ({ type = 'button', onClick, children }: Props) => {
     return (

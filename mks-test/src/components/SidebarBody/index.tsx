@@ -22,9 +22,7 @@ const SidebarBody = ({
                 </Container__SidebarBody__Empty>
             ) : (
                 itemProduct.map((product, index) => (
-                    <Container__SidebarBody key={index}>
-                       {/* {console.log(index)}  */}
-                        
+                    <Container__SidebarBody key={index}>                        
                         <Item
                             product={product}
                             changeCart={changeCart}

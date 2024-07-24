@@ -13,6 +13,7 @@ const Sidebar = ({
     handleAddItem,
     selectedItem,
     handleUpdateItem,
+    closeBuy
 }) => {
     
     return (
@@ -32,7 +33,7 @@ const Sidebar = ({
                 <span>R${totalPrice}</span>
             </div>
 
-            <SidebarFooter />
+            <SidebarFooter closeBuy={closeBuy} />
         </Sidebar__Container>
     );
 };

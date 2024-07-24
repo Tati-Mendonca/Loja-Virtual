@@ -8,10 +8,10 @@ import getProducts from '../api/api';
 import { Container__Root} from './style';
 
 const Home = () => {
-    const [count, setCount] = useState(0); //conta numero de produtos
-    const [openSidebar, setOpenSidebar] = useState(false); //abre e fecha carrinho
-    const [itemProduct, setItemProduct] = useState([]); //id dos produtos selecionados
-    const [selectedItem, setSelectedItem] = useState(1)
+    const [count, setCount] = useState<number>(0); //conta numero de produtos
+    const [openSidebar, setOpenSidebar] = useState< true | false>(false); //abre e fecha carrinho
+    const [itemProduct, setItemProduct] = useState<apiProducts[]>([]); //id dos produtos selecionados
+    const [selectedItem, setSelectedItem] = useState<number>(1)
     const [products, setProducts] = useState<apiProducts[]>([]); //array com lista de productos
 
     useEffect(() => {
@@ -24,21 +24,39 @@ const Home = () => {
             .catch((err) => console.log(err));
     }, []);
 
-    const changeCart = (product) => {
-        const item = Array.from(itemProduct);
+    // const changeCart = (product: { id: number; name: string; photo: string; price: string; }) => {
+    //     const item = Array.from(itemProduct);
+    //     item.push({
+    //         id: product.id,
+    //         name: product.name,
+    //         photo: product.photo,
+    //         price: product.price,
+    //         quantity: selectedItem,
+    //     });
+
+    //     setItemProduct(item);
+    //     setCount(count + 1);
+    // };
+
+
+    const changeCart = (product: {id: number; name: string; photo: string;  price: string; brand: string; description: string, quantity: number}) => {
+        const item = Array.from(itemProduct)
         item.push({
             id: product.id,
             name: product.name,
             photo: product.photo,
             price: product.price,
             quantity: selectedItem,
+            brand: '',
+            description: '',
         });
 
         setItemProduct(item);
-        setCount(count + 1);
-    };
+        setCount(count + 1);    
+   }
 
-    console.log(itemProduct); //lista de produtos selecionados
+
+   // console.log(itemProduct); //lista de produtos selecionados
   //  console.log(selectedItem);
 
   const updateCart = [{ id: 1,
@@ -48,11 +66,10 @@ const Home = () => {
   console.log(updateCart);
   
     
+  const openSidebarCart = () => {
+     openSidebar != true ? setOpenSidebar(true) : setOpenSidebar(false);
+};
 
-
-    const openSidebarCart = () => {
-        openSidebar != true ? setOpenSidebar(true) : setOpenSidebar(false);
-    };
 //____________________________consertar_________________________
 
 
@@ -82,6 +99,9 @@ const Home = () => {
         prices.length <= 1 ? (totalPrice = price,  firstPrice = price) : (totalPrice = firstPrice + price, firstPrice = totalPrice);
     });
     
+    function closeBuy(){
+        alert("Compra finalizada com sucesso!")
+    }
 
     return (
         <Container__Root>
@@ -96,6 +116,7 @@ const Home = () => {
                     handleAddItem={handleAddItem} //adiciona item ao carrinho
                     handleUpdateItem={handleUpdateItem}
                     selectedItem={selectedItem}
+                    closeBuy={closeBuy}
                 />
             ) : null}
             <Navbar changeCart={count} openSidebarCart={openSidebarCart} />

@@ -1,10 +1,10 @@
 import { SidebarFotter } from './style';
 import Button from '../Button';
 
-const SidebarFooter = () => {
+const SidebarFooter = ({ closeBuy }) => {
     return (
         <SidebarFotter>
-            <Button>Finalizar compra</Button>
+            <Button onClick={ closeBuy }>Finalizar compra</Button>
         </SidebarFotter>
     );
 };
